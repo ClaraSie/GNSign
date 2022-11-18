@@ -1,0 +1,216 @@
+a{
+    color: $primary;
+    font-size: $font-4;
+}
+header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 22px;
+    margin-top: 21px;
+    margin-bottom: 14px;
+}
+.fileUpload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
+    background: $white;
+    padding: 48.5px 45px;
+    margin: 0 22px;
+    height: 384px;
+    @include desktop{
+        padding: 78.5px 93.5px;
+        height: 567px;
+    }
+    img{
+        width: 134px;
+        margin-bottom: 20px;
+        @include desktop{
+            width: 225px;
+            margin-bottom: 35px;
+        }
+    }
+    p{
+        color: $primary;
+        margin-top: 15px;
+        @include fzlh($font-2, $lh-base)
+    }
+}
+.deco{
+    position: relative;
+    margin: 0 auto;
+    margin-top: -72px;
+    margin-bottom: 26px;
+    width: 347px;
+    .girl2{
+        position: absolute;
+        top: 45px;
+        left: 124px;
+        z-index: 2;
+    }
+    .girl3{
+        position: absolute;
+        top: 7px;
+        right: 0;
+    }
+    .tree{
+        position: absolute;
+        top: 79px;
+        left: 205px;
+    }
+    .bag{
+        position: absolute;
+        right: 75px;
+        bottom: -12px;
+    }
+    .under{
+        position: absolute;
+        left: 7px;
+        bottom: -26px;
+        z-index: -1;
+    }
+}
+footer{
+    text-align: center;
+    color: $black;
+    margin-bottom: 10px;
+    @include fzlh($font-1, 17px)
+}
+
+input[type="file"] {
+    display: none;
+}
+
+// sign簽名
+.sign{
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-switch{
+        background: $white;
+        width: 240px;
+        border-radius: 14px;
+    }
+    &-container1{
+        padding-top: 53px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-container2{
+        display: none;
+        padding-top: 110px;
+    }
+    &-item{
+        background: $white;
+        margin-bottom: 25px;
+        width: 343px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        label{
+            color: $gray;
+            text-decoration:underline;
+            @include fzlh($font-3, $lh-2)
+        }
+    }
+}
+.color-list{
+    li{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 5px solid $backgroundColor;
+        margin-right: 8px;
+        margin-left: 8px;
+        margin-bottom: 12px;
+    }
+    &-black{
+        background: #000000;
+        &.active{
+            border-color: $white;
+            outline: 2px solid #000000;
+        }
+    }
+    &-blue{
+        background: #0014C7;
+        &.active{
+            border-color: $white;
+            outline: 2px solid #0014C7; 
+        }
+    }
+    &-red{
+        background: #CA0000;
+        &.active{
+            outline: 2px solid #CA0000; 
+            border-color: $white;
+        }
+    }
+}
+
+// pdf渲染區
+.pdfSign{
+    &-header{
+        margin: 16px 0px;
+        justify-content: space-between;
+    }
+    &-page{
+        border-radius: 16px;
+        background: $white;
+        padding: 14px 16px;
+        & > span:first-of-type{
+            padding-left: 35.5px;
+        }
+        & > span:last-of-type{
+            padding-right: 35.5px;
+        }
+    }
+    &-canvas-bg{
+        display: flex;
+        justify-content: center;
+        background: $white;
+    }
+    &-under{
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding: 6.5px 0px;
+        border-radius: 16px;
+        background: $white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $gray;
+            margin-left: 12px;
+            margin-right: 12px;
+            @include fzlh($font-1, 17px);
+            &:hover{
+                color: $primary;
+            }
+        }
+        &-item{
+            width: 40px;
+            height: 40px;
+            border-radius: 9px;
+            background: $backgroundColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background: $gradient;
+            }
+        }
+    }
+    .icon-delete{
+        width: 20px;
+        cursor: pointer;
+    }
+}

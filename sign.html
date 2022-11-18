@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" href="image/logo-full.png" type="image/png">
+    <title>小綠簽</title>
+</head>
+<body>
+    <main class="container">
+        <div class="sign">
+            <div class="sign-switch d-flex">
+                <button class="switchBtn btn-primary-gradient" id="writeSign">手寫簽名</button>
+                <button class="switchBtn btn-white" id="imgSign">匯入簽名檔</button>
+            </div>
+            <!-- 手寫簽名 -->
+            <div class="sign-container1">
+                <ul class="color-list d-flex">
+                    <li class="color-list-black active"></li>
+                    <li class="color-list-blue"></li>
+                    <li class="color-list-red"></li>
+                </ul>
+                <canvas id="canvas" class="card sign-item">在此書寫你的簽名</canvas>
+            </div>
+            <!-- 匯入簽名檔 -->
+            <div class="sign-container2">
+                <div class="card sign-item">
+                    <label for="fileUpload" class="file-upload" >選擇檔案</label>
+                    <input type="file" id="fileUpload" accept="image/jpg, image/png" placeholder="選擇檔案" />
+                    <img src="" alt="" class="show-img">
+                </div>
+            </div>
+            <div class="d-flex">
+                <button class="btn btn-white btn-md clear" style="margin-right: 11.5px;">清除</button>
+                <button class="btn btn-primary-gradient btn-md save">建立簽名</button>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- loading 內容&套件-->
+    <div class="loading" id="loading">
+        <div id='lottie' class="icon-loading"> </div>
+        <p>上傳中...</p>
+    </div>
+    <script src="image/GNsign_loading.json"></script>
+    <script src="js/loading.js"></script>
+    <!-- 載入畫筆canvas -->
+    <script src="js/canvas.js"></script>
+    <!-- 本頁面JS -->
+    <script src="js/sign.js"></script>
+</body>
+</html>

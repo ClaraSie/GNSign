@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" href="image/logo-full.png" type="image/png">
+    <title>小綠簽</title>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <img src="image/logo.png" alt="logo">
+            <a href="#">歷史記錄</a>
+        </header>
+            <div class="card card-dashed fileUpload">
+                <img src="image/file.png" alt="file">
+                <label for="fileUpload" class="btn btn-primary-gradient btn-lg" >選擇檔案</label>
+                <input type="file" id="fileUpload" accept="application/pdf, image/jpg" placeholder="選擇檔案" />
+                <p>(限10MB 內的PDF或JPG檔)</p>
+            </div>
+            <div class="deco">
+                <img src="image/girl1.png" alt="">
+                <img src="image/girl2.png" alt="" class="girl2">
+                <img src="image/tree1.png" alt="" class="tree">
+                <img src="image/bag.png" alt="" class="bag">
+                <img src="image/girl3.png" alt="" class="girl3">
+                <img src="image/under.png" alt="" class="under">
+            </div>
+        <footer>小綠簽 © Code: Clara Hsieh  /  Design: KT</footer>
+    </main>
+
+    <!-- pdf.js套件 -->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+</body>
+</html>
+<script>   
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://mozilla.github.io/pdf.js/build/pdf.worker.js";
+
+document.querySelector("input").addEventListener("change", (e) => {
+    if (e.target.files[0] === undefined) return;
+
+    // 透過 input 所選取的檔案
+    const file = e.target.files[0];
+
+    // 產生fileReader物件
+    const fileReader = new FileReader();
+
+    // 將資料做處理
+    fileReader.readAsDataURL(file);
+
+    // 綁入事件監聽
+    fileReader.addEventListener("load", () => {
+
+      // 獲取readAsArrayBuffer產生的結果，並用來渲染PDF
+    const pdfDataUrl = fileReader.result;
+    localStorage.setItem("pdfdata", pdfDataUrl);
+    location.href = "sign.html"; //進入下一頁
+    });
+});
+</script>

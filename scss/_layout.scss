@@ -1,0 +1,23 @@
+body{
+    background: $backgroundColor;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 16px;
+    @include desktop{
+        max-width: 1200px;
+        padding: 0 110px;
+    }
+}
+.d-flex{
+    display: flex;
+    &-jcc{
+        justify-content: center;
+    }
+}
+.display-none{
+    display: none;
+}
+.mr-16{
+    margin-right: 16px;
+}

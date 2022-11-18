@@ -1,0 +1,29 @@
+@mixin desktop(){
+    @media(min-width: 1025px){
+        @content
+    }
+}
+
+// Media Query for Tablets Ipads portrait mode
+@mixin tabletsIpad(){
+    @media (min-width: 768px) and (max-width: 1024px){
+        @content
+    }
+}
+
+@mixin pad(){
+    @media(max-width: 768px){
+        @content
+    }
+}
+
+@mixin mobile(){
+    @media(max-width: 480px){
+        @content
+    }
+}
+
+@mixin fzlh($fz, $lh){
+    font-size: $fz;
+    line-height: $lh;
+}

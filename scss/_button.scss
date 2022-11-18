@@ -1,0 +1,64 @@
+.btn, .btnGroup{
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.switchBtn{
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    padding: 8.5px 20px;
+    width: 120px;
+    @include fzlh($font-base, $lh-1);
+}
+//儲存
+.btn-submit{
+    width: 260px;
+    padding: 15px 0;
+    @include fzlh($font-3, $lh-2);
+}
+//選擇檔案
+.btn-lg{
+    width: 100%;
+    padding: 17px;
+    @include fzlh($font-3, $lh-1);
+}
+.btn-md{
+    width: 165.5px;
+    padding: 15px 0;
+    @include fzlh($font-3, $lh-2);
+}
+.btn-md2{
+    padding: 16px 29px;
+    @include fzlh($font-3, $lh-2);
+}
+//上下頁
+.btn-sm{
+    border-radius: 12px;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+}
+.btn-2way{
+    padding: 15px 50px;
+    @include fzlh($font-3, $lh-1);
+}
+
+.btn-primary{
+    background: $primary;
+    color: $white;
+    &-gradient{
+        background: $gradient;
+        color: $white;
+    }
+}
+.btn-outline-primary{
+    background: $white;
+    border: 1px solid $primary;
+    color: $primary;
+}
+.btn-white{
+    background: $white;
+    color: $primary;
+}

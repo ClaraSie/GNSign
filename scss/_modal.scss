@@ -1,0 +1,63 @@
+//https://github.com/z29591259/CssTrick/blob/master/Modal.html
+#toggleMe, #toggleText {
+    display: none;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform:translateX(-50%) translateY(-50%);
+    padding: 16px;
+    background-color: $backgroundColor;
+    color: $primary;
+    @include fzlh($font-3, $lh-2);
+    width: 343px;
+    text-align: left;
+    p{
+        text-align: center;
+    }
+    a{ 
+        text-decoration: none;       
+        @include fzlh($font-3, $lh-2);
+    }
+    textarea{
+        resize: none;
+        border-radius: 16px;
+        border: 0;
+        padding: 10px 16px;
+        outline: none;
+        width: 100%;
+        margin-bottom: 16px;
+        @include fzlh($font-2, $lh-base);
+    }
+}
+#toggleControl, #toggleControlText{
+    display: none;
+}
+#toggleControl:checked ~ #toggleMe, #toggleControl:checked ~ .toggleOverlay,
+#toggleControlText:checked ~ #toggleText, #toggleControlText:checked ~ .toggleOverlay
+{
+    display: block;
+}
+.toggleOverlay{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: $gray;
+    opacity: 0.8;
+}
+.toggleSign{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    .signImg{
+        width: 271px;
+        height: 61px;
+        background: $white;
+        border-radius: 16px;
+        margin-right: 18px;
+        cursor: pointer;
+    }
+}
