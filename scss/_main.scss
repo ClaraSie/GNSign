@@ -112,6 +112,9 @@ input[type="file"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include desktop{
+        padding-top: 50px;
+    }
     &-switch{
         background: $white;
         width: 240px;
@@ -126,6 +129,9 @@ input[type="file"] {
     &-container2{
         display: none;
         padding-top: 110px;
+        @include desktop{
+            padding-top: 127px;
+        }
     }
     &-item{
         background: $white;
@@ -135,6 +141,11 @@ input[type="file"] {
         display: flex;
         align-items: center;
         justify-content: center;
+        @include desktop{
+            margin-bottom: 40px;
+            width: 590px;
+            height: 224px;
+        }
         label{
             color: $gray;
             text-decoration:underline;
@@ -155,6 +166,9 @@ input[type="file"] {
         display: flex;
         align-items: center;
         justify-content: center;
+        @include desktop{
+            margin-bottom: 29px;
+        }
     }
     &-black{
         background: #000000;
