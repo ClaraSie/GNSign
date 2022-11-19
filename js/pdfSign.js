@@ -11,6 +11,7 @@ document.getElementById('submit').addEventListener('click', () => {
 })
 
 ////////////////////////////////////////////////////////////////////////////
+// 下方添加canvas用
 const sign = document.querySelector(".signImg"); //簽名檔
 let canvasNum = 0;
 

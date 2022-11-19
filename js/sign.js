@@ -27,7 +27,7 @@ $('.color-list').click(function(e) {
         item.classList.remove('active');
     })
 
-    $('.' + nowColor).toggleClass('active');
+    e.target.classList.add('active');
     if (nowColor == 'color-list-black'){
         ctx.fillStyle = "#000000";
         ctx.strokeStyle = "#000000";

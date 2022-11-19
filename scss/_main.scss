@@ -1,7 +1,4 @@
-a{
-    color: $primary;
-    font-size: $font-4;
-}
+
 header{
     display: flex;
     align-items: flex-end;
@@ -9,6 +6,10 @@ header{
     padding: 0 22px;
     margin-top: 21px;
     margin-bottom: 14px;
+    a{
+        color: $primary;
+        font-size: $font-4;
+    }
 }
 .fileUpload{
     display: flex;
@@ -83,6 +84,28 @@ input[type="file"] {
     display: none;
 }
 
+//歷史記錄
+.navbar{
+    background: $primary;
+    i{
+        color: $white;
+        padding: 16px 0;
+    }
+}
+.history{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include fzlh($font-3, $lh-2);
+    .icon-tree{
+        height: 200px;
+        width: 95px;
+        margin-top: 112px;
+        margin-bottom: 33px;
+    }
+}
+
+
 // sign簽名
 .sign{
     padding-top: 28px;
@@ -115,6 +138,7 @@ input[type="file"] {
         label{
             color: $gray;
             text-decoration:underline;
+            cursor: pointer;
             @include fzlh($font-3, $lh-2)
         }
     }
@@ -124,30 +148,30 @@ input[type="file"] {
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        border: 5px solid $backgroundColor;
         margin-right: 8px;
         margin-left: 8px;
         margin-bottom: 12px;
+        border: 5px solid $backgroundColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &-black{
         background: #000000;
         &.active{
-            border-color: $white;
-            outline: 2px solid #000000;
+            box-shadow: 0 0 0 2px #000000;
         }
     }
     &-blue{
         background: #0014C7;
         &.active{
-            border-color: $white;
-            outline: 2px solid #0014C7; 
+            box-shadow: 0 0 0 2px #0014C7;
         }
     }
     &-red{
         background: #CA0000;
         &.active{
-            outline: 2px solid #CA0000; 
-            border-color: $white;
+            box-shadow: 0 0 0 2px #CA0000;
         }
     }
 }
