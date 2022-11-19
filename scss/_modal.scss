@@ -15,7 +15,8 @@
         text-align: center;
     }
     a{ 
-        text-decoration: none;       
+        text-decoration: none;
+        color: $primary;  
         @include fzlh($font-3, $lh-2);
     }
     textarea{

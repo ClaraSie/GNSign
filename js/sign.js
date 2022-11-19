@@ -67,7 +67,14 @@ imgUpload.addEventListener("change", (e) => {
 
 const clearBtn = document.querySelector(".clear");
 const saveBtn = document.querySelector(".save");
-clearBtn.addEventListener("click", reset);
+clearBtn.addEventListener("click", function(){
+    reset(); //canvas reset
+    
+    // upload img reset
+    const showImage = document.querySelector(".show-img");
+    showImage.src = "";
+    document.querySelector('.file-upload').style.display = "block";
+});
 saveBtn.addEventListener("click", function(){
     saveImage();
     location.href = "pdfSign.html"; //進入下一頁
